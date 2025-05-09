@@ -8,8 +8,8 @@
     <title>Participate Quiz</title>
 </head>
 
-<body>
-    <header class="bg-purple-600">
+<body class="border border-purple-600 rounded-xl max-w-screen-xl w-[95%] my-5 mx-auto">
+    <header class="bg-purple-600 overflow-hidden rounded-t-xl">
         <div class=" p-5 flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex gap-3">
                 <div class="">
@@ -24,7 +24,39 @@
             <a href="../index.html" class="btn text-purple-600">Home</a>
         </div>
     </header>
-    <h1>Participate Quiz</h1>
+    <main class="flex justify-center items-center flex-col p-10">
+        <div class="quiz-container rounded-xl overflow-hidden max-w-[600px] shadow-lg border border-purple-600">
+            <div class="quiz-header p-16" id="quiz">
+                <h2 id="question" class="text-xl mb-5">Question Text</h2>
+                <ul class="list-none p-0 *:text-xl">
+                    <li class="p-2">
+                        <input type="radio" name="answer" id="a" class="answer radio checked:text-purple-600">
+                        <label for="a" id="a_text" class="cursor-pointer ml-2">Answer</label>
+                    </li>
+
+                    <li class="p-2">
+                        <input type="radio" name="answer" id="b" class="answer radio checked:text-purple-600">
+                        <label for="b" id="b_text" class="cursor-pointer ml-2">Answer</label>
+                    </li>
+
+                    <li class="p-2">
+                        <input type="radio" name="answer" id="c" class="answer radio checked:text-purple-600">
+                        <label for="c" id="c_text" class="cursor-pointer ml-2">Answer</label>
+                    </li>
+
+                    <li class="p-2">
+                        <input type="radio" name="answer" id="d" class="answer radio checked:text-purple-600">
+                        <label for="d" id="d_text" class="cursor-pointer ml-2">Answer</label>
+                    </li>
+
+                </ul>
+                <button id="submit" class="btn btn-lg w-full bg-purple-500 text-white text-xl m-0 mt-5 rounded-xl">Submit</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
 </body>
 
 </html>
