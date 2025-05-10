@@ -1,4 +1,4 @@
-const quizData = [
+const tempData = [
     {
         question: "Which language runs in a web browser?",
         a: "Java",
@@ -31,9 +31,13 @@ const quizData = [
         d: "none of the above",
         correct: "b",
     },
-
-
 ];
+
+let quizData = JSON.parse(localStorage.getItem('quizData'));
+if (!quizData) {
+    localStorage.setItem('quizData', JSON.stringify(tempData));
+    quizData = JSON.parse(localStorage.getItem('quizData'));
+}
 
 const quiz= document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
