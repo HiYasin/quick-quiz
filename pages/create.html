@@ -25,7 +25,8 @@
         </div>
     </header>
     <main class="flex justify-center items-center flex-col p-10">
-        <form id="quizForm" class="quiz-container rounded-xl overflow-hidden w-full max-w-2xl shadow-lg border border-purple-600 p-5">
+        <form id="quizForm"
+            class="quiz-container rounded-xl overflow-hidden w-full max-w-2xl shadow-lg border border-purple-600 p-5">
             <h2 class="text-xl mb-5">Add a New Quiz Question</h2>
             <div class="mb-3">
                 <label for="question" class="block mb-1">Question:</label>
@@ -51,8 +52,30 @@
                 <label for="correct" class="block mb-1">Correct Answer (a, b, c, or d):</label>
                 <input type="text" id="correct" class="input w-full border border-gray-300 rounded p-2" required>
             </div>
-            <button type="submit" class="btn btn-lg w-full bg-purple-500 text-white text-xl m-0 mt-5 rounded-xl">Add Question</button>
+            <button type="submit" class="btn btn-lg w-full bg-purple-500 text-white text-xl m-0 mt-5 rounded-xl">Add
+                Question</button>
         </form>
+
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <div class="flex justify-center items-center">
+                    <div class="w-fit aspect-square rounded-full bg-green-200 flex justify-center items-center my-3 ">
+                        <h2 class="text-6xl text-center">✔</h2>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-center">Quiz question added successfully!</h3>
+                <p class="py-4 text-center">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-purple-600 text-white">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <script src="../scripts/addQuiz.js"></script>

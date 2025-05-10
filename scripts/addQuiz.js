@@ -25,6 +25,7 @@ document.getElementById('quizForm').addEventListener('submit', function (e) {
     // Add the new quiz to the array
     quizzes.push(newQuiz);
 
+    
     // Save the updated array back to local storage
     localStorage.setItem('quizData', JSON.stringify(quizzes));
 
@@ -32,5 +33,6 @@ document.getElementById('quizForm').addEventListener('submit', function (e) {
     document.getElementById('quizForm').reset();
 
     // Notify the user
-    alert('Quiz question added successfully!');
+    // alert('Quiz question added successfully!');
+    my_modal_1.showModal();
 });
