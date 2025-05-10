@@ -34,7 +34,7 @@ const tempData = [
 ];
 
 let quizData = JSON.parse(localStorage.getItem('quizData'));
-if (!quizData) {
+if (!quizData || quizData.length === 0) {
     localStorage.setItem('quizData', JSON.stringify(tempData));
     quizData = JSON.parse(localStorage.getItem('quizData'));
 }
